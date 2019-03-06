@@ -3,6 +3,9 @@
 <!-- vim-markdown-toc GFM -->
 
 * [1 软件工程](#1-软件工程)
+    * [1.1 一流代码的特性](#11-一流代码的特性)
+    * [1.2 需求分析和系统设计的不同](#12-需求分析和系统设计的不同)
+    * [1.3 项目开发流程图](#13-项目开发流程图)
 * [2 需求设计及系统设计](#2-需求设计及系统设计)
     * [2.1 必须的文档](#21-必须的文档)
     * [2.2 需求分析文档](#22-需求分析文档)
@@ -19,29 +22,39 @@
 <!-- vim-markdown-toc -->
 
 ## 1 软件工程
-> * 一流代码的特性
->   * 高效（Fast）
->   * 鲁棒（Solid and Robust）
->   * 简洁（Maintainable and Simple）
->   * 共享（Re-usable）
->   * 可测试（Testable）
->   * 可移植（Portable）
->   * 可监控（Monitorable）
->   * 可运维（Operational）
->     * 部署 Easy to deploy
->     * 变更 Easy to changes
->     * 维护 Easy to maintain
->     * 监控 Easy to observable
->   * 可扩展（Scalable & Extensible）
-> * 需求分析 & 系统设计
+
+### 1.1 一流代码的特性
+> * 高效（Fast）
+> * 鲁棒（Solid and Robust）
+> * 简洁（Maintainable and Simple）
+> * 共享（Re-usable）
+> * 可测试（Testable）
+> * 可移植（Portable）
+> * 可监控（Monitorable）
+> * 可运维（Operational）
+>   * 部署 Easy to deploy
+>   * 变更 Easy to changes
+>   * 维护 Easy to maintain
+>   * 监控 Easy to observable
+> * 可扩展（Scalable & Extensible）
+
+### 1.2 需求分析和系统设计的不同
+
 >   * 需求分析：定义系统 / 软件黑盒的行为（external,what）
 >   * 系统设计：设计系统 / 软件白盒的机制（internal，how&why）
+
+### 1.3 项目开发流程图
+
+图放在首页刷图出来比较慢，就不放在首页了:-)
+
+https://github.com/meetbill/code_style/wiki/development
 
 ## 2 需求设计及系统设计
 
 文档是设计过程中使用的工具和设计过程的结果
 
 ### 2.1 必须的文档
+
 凡是不那么“显而易见”的地方，最好都留下文档
 
 > * 需求设计文档：需求，重点，取舍过程
