@@ -17,6 +17,9 @@
     * [4.1 块注释](#41-块注释)
     * [4.2 行注释](#42-行注释)
 * [5 docstring](#5-docstring)
+    * [5.1 module 注释](#51-module-注释)
+    * [5.2 function 注释](#52-function-注释)
+    * [5.3 class 注释](#53-class-注释)
 * [6 命名规范](#6-命名规范)
 * [7 函数返回值](#7-函数返回值)
 
@@ -283,8 +286,14 @@ x = x + 1 # x 加 1
 ## 5 docstring
 docstring 的规范在 [PEP 257](http://www.python.org/dev/peps/pep-0257/) 中有详细描述，其中最其本的两点：
 
-1. 所有的公共模块、函数、类、方法，都应该写 docstring。私有方法不一定需要，但应该在 def 后提供一个块注释来说明。
-2. docstring 的结束"""应该独占一行，除非此 docstring 只有一行。
+> * 1. 所有的公共模块、函数、类、方法，都应该写 docstring。私有方法不一定需要，但应该在 def 后提供一个块注释来说明。
+> * 2.docstring 的结束"""应该独占一行，除非此 docstring 只有一行。
+> * 3·『强制』使用 docstring 描述 module、function、class 和 method 接口。docstring 必须用三个双引号括起来。
+> * 4·『强制』对外接口部分必须用 docstring 描述，内部接口视情况自行决定是否写 docstring。
+> * 5·『强制』接口的 docstring 描述至少包括功能简介、参数、返回值。如果可能抛出异常，必须注明。
+> * 6·『强制』每个文件都必须有文件声明，文件声明必须包括以下信息：版权声明，功能和用途简介，修改人及联系方式。
+> * 7·『建议』TODO 注释格式必须为：
+>   * # TODO: 干什么事情 $ 负责人（邮箱前缀）$ 最终期限 (YYYY-MM-DD)$
 
 ```python
 """Return a foobar
@@ -292,6 +301,32 @@ Optional plotz says to frobnicate the bizbaz first.
 """
 
 """Oneline docstring"""
+```
+### 5.1 module 注释
+
+```
+Authors:
+Date: 2019/04/05 17:23:06
+```
+
+### 5.2 function 注释
+
+```
+Args:
+    ...
+Returns:
+    ...
+example:
+    ...
+Raises:
+    ...
+```
+
+### 5.3 class 注释
+
+```
+Attributes:
+    ...
 ```
 
 ## 6 命名规范
@@ -323,5 +358,5 @@ Class FooBar:
 > * OK,ERROR
 >   * "操作型" 的函数，表示成功或失败，如：data_get()
 > * Data,None
->   * "获取数据型" 的函数，表示 "有数据" 或者 "无数据/获取失败"，如 data_get()
+>   * "获取数据型" 的函数，表示 "有数据" 或者 "无数据 / 获取失败"，如 data_get()
 
