@@ -133,7 +133,8 @@ def main():
 * 文件头部加入`#-*-conding:utf-8-*-`标识
 
 ## 2 import 语句
-* import 语句应该分行书写
+
+> import 语句应该分行书写
 
 ```python
 # yes
@@ -146,8 +147,12 @@ import sys,os
 # yes
 from subprocess import Popen, PIPE
 ```
-* import 语句应该使用 __absolute__ import
 
+> 『建议』 [PY002] 禁止使用 from xxx import *
+
+> 『建议』 [PY003] import 时必须使用 package 全路径名（相对 PYTHONPATH)，禁止使用相对路径（相对当前路径），禁止使用 sys.path.append('../../') 等类似操作改变当前环境变量。
+
+避免模块名冲突，查找包更容易。部署时保持项目结构，使用 virtualenv 等创建隔离的 Python 环境，并配置需要的 PYTHONPATH。
 ```python
 # yes
 from foo.bar import Bar
@@ -156,8 +161,9 @@ from foo.bar import Bar
 from ..bar import Bar
 ```
 
-* import 语句应该放在文件头部，置于模块说明及 docstring 之后，于全局变量之前；
-* import 语句应该按照顺序排列，每组之间用空行分隔
+> import 语句应该放在文件头部，置于模块说明及 docstring 之后，于全局变量之前；
+
+> import 语句应该按照顺序排列，每组之间用空行分隔
 
 ```python
 import os
@@ -169,22 +175,21 @@ import zmq
 import foo
 ```
 
-* 导入其他模块的类定义时，可以使用相对导入
+> 『建议』 禁止使用 from xxx import yyy 语法直接导入类或函数（即 yyy 只能是 module 或 package，不能是类或函数）。
 
-```python
-from myclass import MyClass
 ```
+避免冲突。调用关系简单明了，x.obj 表示 obj 对象定义在模块 x 中。
 
-* 如果发生命名冲突，则可使用命名空间
+#YES
+from Crypto.Cipher import AES
+import os
+os.unlink(path)
 
-```python
-import bar
-import foo.bar
-
-bar.Bar()
-foo.bar.Bar()
+#NO
+# os 已经是最底下的模块了
+from os import unlink
+unlink(path)
 ```
-
 ## 3 空格
 * 在二元运算符两边各空一格`[=,-,+=,==,>,in,is not, and]`:
 
