@@ -12,6 +12,8 @@
 * [3 代码编写](#3-代码编写)
     * [3.1 代码规范](#31-代码规范)
     * [3.2 Code review 步骤](#32-code-review-步骤)
+    * [3.3 语义化版本](#33-语义化版本)
+    * [3.4 如何维护更新日志](#34-如何维护更新日志)
 * [4 建议](#4-建议)
     * [程序员的技术能力模型](#程序员的技术能力模型)
 
@@ -81,6 +83,38 @@ https://github.com/meetbill/code_style/wiki/development
 > * Step 4：细节
 >   * Layout，命名，...
 
+### 3.3 语义化版本
+
+> [语义化版本控制规范](https://semver.org/lang/zh-CN/)
+```
+版本格式：主版本号. 次版本号. 修订号，版本号递增规则如下：
+    主版本号：当你做了不兼容的 API 修改，
+    次版本号：当你做了向下兼容的功能性新增，
+    修订号：当你做了向下兼容的问题修正。
+```
+
+### 3.4 如何维护更新日志
+
+> [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)
+```
+指导原则
+    记住日志是写给人的，而非机器。
+    每个版本都应该有独立的入口。
+    同类改动应该分组放置。
+    版本与章节应该相互对应。
+    新版本在前，旧版本在后。
+    应包括每个版本的发布日期。
+    注明是否遵守语义化版本格式。
+
+变动类型
+    Added 新添加的功能。
+    Changed 对现有功能的变更。
+    Deprecated 已经不建议使用，准备很快移除的功能。
+    Removed 已经移除的功能。
+    Fixed 对 bug 的修复
+    Security 对安全的改进
+```
+
 ## 4 建议
 
 不同种类的问题，有不同的模式，需要选用合适的表达模式
@@ -100,10 +134,10 @@ https://github.com/meetbill/code_style/wiki/development
 ```
 class Clock
 {
-    int hour; //表示时针
-    int minute; //表示分针
-    int second; //表示秒针
-    getTime(); //显示时间
-    setTime(hour,mimute,second); //调时间
+    int hour; // 表示时针
+    int minute; // 表示分针
+    int second; // 表示秒针
+    getTime(); // 显示时间
+    setTime(hour,mimute,second); // 调时间
 }
 ```
