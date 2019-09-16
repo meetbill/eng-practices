@@ -16,6 +16,7 @@
     * [3.4 如何维护更新日志](#34-如何维护更新日志)
 * [4 建议](#4-建议)
     * [程序员的技术能力模型](#程序员的技术能力模型)
+* [5 其他](#5-其他)
 
 <!-- vim-markdown-toc -->
 
@@ -87,7 +88,7 @@ https://github.com/meetbill/code_style/wiki/development
 
 > [语义化版本控制规范](https://semver.org/lang/zh-CN/)
 ```
-版本格式：主版本号. 次版本号. 修订号，版本号递增规则如下：
+版本格式：主版本号。次版本号。修订号，版本号递增规则如下：
     主版本号：当你做了不兼容的 API 修改，
     次版本号：当你做了向下兼容的功能性新增，
     修订号：当你做了向下兼容的问题修正。
@@ -141,3 +142,6 @@ class Clock
     setTime(hour,mimute,second); // 调时间
 }
 ```
+## 5 其他
+
+[Google 的工程实践文档](https://google.github.io/eng-practices/)
