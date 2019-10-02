@@ -14,6 +14,7 @@
     * [3.2 Code review 步骤](#32-code-review-步骤)
     * [3.3 语义化版本](#33-语义化版本)
     * [3.4 如何维护更新日志](#34-如何维护更新日志)
+    * [3.5 HTTP API 设计指南](#35-http-api-设计指南)
 * [4 建议](#4-建议)
     * [程序员的技术能力模型](#程序员的技术能力模型)
 * [5 其他](#5-其他)
@@ -115,6 +116,10 @@ https://github.com/meetbill/code_style/wiki/development
     Fixed 对 bug 的修复
     Security 对安全的改进
 ```
+
+### 3.5 HTTP API 设计指南
+
+[HTTP API 设计指南](./http-api-design)
 
 ## 4 建议
 
