@@ -17,7 +17,8 @@
     * [3.5 HTTP API 设计指南](#35-http-api-设计指南)
 * [4 建议](#4-建议)
     * [程序员的技术能力模型](#程序员的技术能力模型)
-* [5 其他](#5-其他)
+* [5 可用性能力评估模型](#5-可用性能力评估模型)
+* [6 其他](#6-其他)
 
 <!-- vim-markdown-toc -->
 
@@ -147,6 +148,10 @@ class Clock
     setTime(hour,mimute,second); // 调时间
 }
 ```
-## 5 其他
+## 5 可用性能力评估模型
+
+![Screenshot](images/usability_evaluation.png )
+
+## 6 其他
 
 [Google 的工程实践文档](https://google.github.io/eng-practices/)
