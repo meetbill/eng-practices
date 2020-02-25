@@ -58,7 +58,7 @@ from ..bar import Bar
 
 > import 语句应该放在文件头部，置于模块说明及 docstring 之后，于全局变量之前；
 
-> import 语句应该按照顺序排列，每组之间用空行分隔
+> import 语句应该按照顺序排列，每组之间用空行分隔(标准库，第三方库，应用程序只有库顺序排列 import，每部分之间留一个空行)
 
 ```python
 import os
@@ -312,7 +312,7 @@ docstring 的规范在 [PEP 257](http://www.python.org/dev/peps/pep-0257/) 中�
 > * 5·『强制』接口的 docstring 描述至少包括功能简介、参数、返回值。如果可能抛出异常，必须注明。
 > * 6·『强制』每个文件都必须有文件声明，文件声明必须包括以下信息：版权声明，功能和用途简介，修改人及联系方式。
 > * 7·『建议』TODO 注释格式必须为：
->   * # TODO: 干什么事情 $ 负责人（邮箱前缀）$ 最终期限 (YYYY-MM-DD)$
+>   * TODO: 干什么事情 $负责人（邮箱前缀）$最终期限 (YYYY-MM-DD)$
 
 ```python
 """Return a foobar
@@ -335,10 +335,26 @@ Args:
     ...
 Returns:
     ...
-example:
-    ...
 Raises:
     ...
+```
+
+> 例子
+```python
+def get_token_by_username_password(username, password):
+    """
+    get token by username and password
+    Args:
+        username: username
+        password: password
+    Returns:
+        result: dict()
+            result["RESULT"]: success whitout error
+            result["TOKEN"]: butterfly token
+            result["MSG"]: error message
+    Raises:
+        ArgsException: args are invaild
+    """
 ```
 
 #### class 注释
