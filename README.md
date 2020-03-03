@@ -161,7 +161,14 @@ class Clock
 ```
 ## 5 可用性能力评估模型
 
+> 可用性能力评估模型
+
 ![Screenshot](images/usability_evaluation.png )
+
+> 可用性工程建设
+
+![Screenshot](images/usability_construction.png)
+
 
 ### 5.1 运维领域国际标准 ISO 20000
 
