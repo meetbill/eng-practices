@@ -169,6 +169,10 @@ class Clock
 
 ![Screenshot](images/usability_construction.png)
 
+> 故障时间线
+
+![Screenshot](images/fault_time_line.png)
+
 
 ### 5.1 运维领域国际标准 ISO 20000
 
